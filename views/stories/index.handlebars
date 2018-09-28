@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container"><img src="/image/Picture1.png" alt="imag" class="img" width="100%"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        {{#if data}}
+          {{#each data}}
+          <div class="card">
+          <div class="card-header">
+            <b>Title</b>: {{this.title}}
+            <br>
+            <b>url</b>: <a href="{{this.url}}">{{this.url}}</a>
+            <br>
+            <a href="#" class="btn btn-success">save article</a>
+          </div>
+        </div>
+          {{/each}}
+        {{else}}
+        <div class="card">
+          <div class="card-header">
+            Oh oh, it looks like we have no new article
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
